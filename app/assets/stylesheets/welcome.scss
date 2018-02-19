@@ -1,0 +1,25 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html body #bgimage {
+  background: url('rails_bg.jpg');
+  }
+
+
+#background {
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       min-width: 100%;
+       min-height: 100%;
+       width: 100%;
+       height: auto;
+       z-index: -100;
+       -webkit-transform: translateX(-50%) translateY(-50%);
+       transform: translateX(-50%) translateY(-50%);
+       background: image-url('') no-repeat;
+}
+
+
+

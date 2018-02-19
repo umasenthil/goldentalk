@@ -3,3 +3,33 @@
 .clear {
   clear: both;
 }
+
+h1 {
+  font-family: "nobileregular", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "nobilemedium_italic", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.links a {
+  color: black;
+  font-size: 25px;
+  border-bottom: 1px solid #dfdfdf;
+  font-family: 'nobileregular', sans-serif;
+  font-weight: bold;
+}
+
+html body #bgimage {
+  background: url('rails_bg.jpg');
+}
+
+body{
+  background-image: image-url('rails_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
