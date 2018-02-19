@@ -1,15 +1,27 @@
+<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+
 <div>
   <%= link_to 'New User', new_user_path, class: 'button alt' %>
 </div>
 
-<% @users.each do |user| %>
-  <div>
-    <h1><%= user.first_name %></h1><br />
-    <i><%= user.last_name %></i><br />
-    <p><%= user.email %></p><br />
-  </div>
-
-  <hr />
-<% end %>
+<table>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.skypeid %></td>
+      <td> <div id= <%= "SkypeButton_Call_"+user.first_name %>>
+        <script type="text/javascript">
+          Skype.ui({
+                 "name": "call",
+                 "element": "<%= "SkypeButton_Call_"+user.first_name %>",
+                 "participants": ["<%= user.skypeid %>"]
+                });
+        </script>
+        </td>
+    </tr>
+  <% end %>
+</table>
 
 
