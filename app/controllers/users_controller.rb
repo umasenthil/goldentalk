@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 
   def create
 	@user = User.create(user_params)
+	if @user.invalid?
+	  flash[:error] = 'Please enter First Name, SkypeId and Password to create an account'
+	end
+	
 	@user.save
 
 	redirect_to users_path
